@@ -16,7 +16,12 @@
 html{-webkit-text-size-adjust:100%;scroll-padding-top:150px}
 body{
   margin:0;color:var(--texto);font:400 16px/1.35 var(--sans);
-  background:#6F7A55 url("../img/fondo.jpg") center/cover fixed;
+  background:#5E6B3E;
+}
+/* Paisaje de golf fijo detrás de la carta (capa propia: background-attachment:fixed no anda en iPhone) */
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(20,32,22,0) 55%,rgba(20,32,22,.35)),url("fondo.jpg") 30% center/cover no-repeat;
 }
 img{display:block;max-width:100%;height:auto}
 
@@ -57,9 +62,9 @@ img{display:block;max-width:100%;height:auto}
 .chip:active,.chip.activo{background:var(--dorado);border-color:var(--dorado);color:var(--verde)}
 
 /* ---------- Tarjeta de papel (marco doble con esquinas recortadas) ---------- */
-main{max-width:var(--ancho);margin:0 auto;padding:18px 10px 8px}
+main{max-width:var(--ancho);margin:0 auto;padding:30px 16px 18px}
 .hoja{
-  --r:16px;position:relative;margin:0 0 22px;padding:30px 20px 26px;
+  --r:16px;position:relative;margin:0 0 46px;padding:30px 20px 26px;
   background:linear-gradient(180deg,var(--papel),var(--papel-2));
   -webkit-mask:
     radial-gradient(circle at 0 0,#0000 var(--r),#000 calc(var(--r) + .5px)) top left,
@@ -129,7 +134,7 @@ mark{background:rgba(199,154,70,.35);color:inherit;border-radius:2px;padding:0 1
 .ramita{width:44px;height:22px;fill:none;stroke:#F4F0E6;stroke-width:1.4;stroke-linecap:round;opacity:.9}
 
 @media (min-width:640px){
-  main{padding:22px 0 8px}
+  main{padding:40px 0 18px}
   .hoja{padding:36px 34px 30px}
   .barra{border-radius:0 0 10px 10px}
 }
