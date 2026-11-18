@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carta · Hoyo 19 – Café & Terrazas del Golf</title>
+<meta name="description" content="Carta de Hoyo 19 – Café & Terrazas del Golf, Alta Gracia.">
+<meta name="theme-color" content="#1F3A2E">
+<link rel="icon" type="image/png" href="img/icono.png">
+<link rel="apple-touch-icon" href="img/icono.png">
+<link rel="preload" href="fonts/Cinzel-700-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fuentes.css">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<header class="hero">
+  <img src="img/hero.jpg" alt="Hoyo 19 – Café & Terrazas del Golf" width="620" height="262">
+</header>
+
+<nav class="barra" aria-label="Secciones de la carta">
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div class="buscador">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+    <input id="buscar" type="search" placeholder="Buscar en la carta…" autocomplete="off" aria-label="Buscar en la carta">
+    <button id="limpiar" type="button" aria-label="Borrar búsqueda" hidden>×</button>
+  </div>
+  <div class="chips" id="chips"></div>
+</nav>
+
+<main id="carta" aria-live="polite">
+  <p class="estado">Cargando la carta…</p>
+</main>
+
+<footer class="pie">
+  <svg class="ramita" viewBox="0 0 48 24" aria-hidden="true"><path d="M24 22V8M24 14c-4-1-7-4-8-8 4 0 7 3 8 8zM24 14c4-1 7-4 8-8-4 0-7 3-8 8zM24 9c-2-2-2-5 0-7 2 2 2 5 0 7z"/></svg>
+  <p>Hoyo 19 · Café &amp; Terrazas del Golf<br>Alta Gracia, Córdoba</p>
+  <p class="nota">Precios expresados en pesos argentinos.</p>
+</footer>
+
+<script src="js/xlsx.full.min.js"></script>
+<script src="js/carta.js"></script>
+</body>
+</html>
